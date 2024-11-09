@@ -1,0 +1,342 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* extra cute  Font classes */
+.bungee-inline-regular {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+/* main navbar box css*/
+
+/* main navbar box css */
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to right, #a4e6f2, #4facfe); /* Gradient background */
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for floating effect */
+  position: sticky; /* Make navbar stick at the top */
+  top: 0;
+  z-index: 10;
+}
+
+/* navbar title */
+.navbar-title {
+  font-family: "Bungee Inline", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* navbar icon */
+.navbar-icon {
+  margin-right: 10px;
+  font-size: 2.5rem; /* Adjust icon size */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-title:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.navbar-icon:hover {
+  transform: rotate(20deg); /* Rotate icon on hover */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 2rem; /* Smaller font size on mobile */
+  }
+
+  .navbar-icon {
+    font-size: 2rem; /* Adjust icon size on mobile */
+  }
+}
+
+/* main container box css*/
+.content-container {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d7dae0;
+}
+
+.tabs{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.tab-leagues{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Bungee Inline", sans-serif;
+  background-color: #828da7;
+  border-right: 5px solid #ccc;
+  border-radius: 5px;
+}
+.tab-leagues:hover {
+  transform: scale(0.80);
+}
+
+.tab-standings{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Bungee Inline", sans-serif;
+  background-color: #828da7;
+  border-right: 5px solid #ccc;
+  border-radius: 5px; /* Applies to all corners */
+  box-shadow: 2px 0 0 0 #ccc; /* Simulates a right border */
+}
+.tab-standings:hover {
+  transform: scale(0.80);
+}
+
+.tab-players{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Bungee Inline", sans-serif;
+  background-color: #828da7;
+  border-right: 5px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 0 0 0 #ccc; /* Simulates a right border */
+}
+
+.tab-players:hover {
+  transform: scale(0.80);
+}
+
+.tab-world_cup{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Bungee Inline", sans-serif;
+  background-color: #828da7;
+  border-right: 5px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 0 0 0 #ccc; /* Simulates a right border */
+}
+
+.tab-world_cup:hover {
+  transform: scale(0.80);
+}
+
+/* tab leagues*/
+.leagues-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.league-card {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.league-card:hover {
+  transform: scale(1.05);
+}
+
+.league-image {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.league-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.league-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.league-link:hover {
+  text-decoration: underline;
+}
+
+/* tab players*/
+.players-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.league-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.league-buttons button {
+  padding: 10px 20px;
+  background-color: #828da7;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+.league-buttons button.active-league {
+  background-color: #786567;
+}
+
+.league-buttons button:hover {
+  background-color: #786567;
+}
+
+.players-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.back-to-leagues {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.back-to-leagues button {
+  padding: 10px 20px;
+  background-color: #828da7; /* Green */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.player-item {
+  padding: 15px;
+  background-color: #786567;
+  color: #a4e6f2;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.player-card {
+  max-width: 500px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #828da7;
+  color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.player-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.player-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.player-card p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.player-card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d7dae0;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.player-card button:hover {
+  background-color: linear-gradient(to right, #a4e6f2, #4facfe);
+}
+
+/* main footer box css*/
+.footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #828da7;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
