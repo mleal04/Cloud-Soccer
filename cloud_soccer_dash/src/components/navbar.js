@@ -4,7 +4,7 @@ import "../App.css";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <h1 className="navbar-title">Cloud Soccer ⚽</h1>
+      <h1 className="navbar-title">⚽⚽Cloud Soccer⚽ ⚽</h1>
     </div>
   );
 };
